@@ -1,0 +1,23 @@
+.op2{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.op2 p span{
+
+    color: green;
+}
+ 
+#op2-d {
+
+    color: blue;
+}
+
+#op2-e {
+
+    color: red;
+}
