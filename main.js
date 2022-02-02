@@ -161,3 +161,97 @@ const inventory = [
     sold: 8,
   },
 ];
+
+// opdracht 1a
+
+// const brand = []
+// for(const i=0; i<=inventory.length; i++){
+
+//  brand.push(inventory[i].name)
+// }
+//  console.log(brand);
+
+// --------------------------------------------------------------------------------------------------------------------
+const brand = []
+ for(const item of inventory){
+
+  brand.push(item.name)
+
+}  
+// console.log(brand);
+
+// opdracht 1b
+
+const verzamelen = []
+for( const item of inventory){
+   if(item.sold !==0){
+    verzamelen.push(item)
+   }
+ 
+}
+//  console.log('verzamelen =' , verzamelen)
+
+//  opdracht 1c
+
+const ambiLight = []
+for(const item of inventory){
+
+   if(item.options.ambiLight == true){
+
+    ambiLight.push(item)
+   }
+}
+// console.log('ambiLight =' , ambiLight)
+
+// opdracht 1d
+
+function sorteren(){
+
+  inventory.sort(function(a,b ){
+    return a.price - b.price
+  })
+}
+sorteren();
+// console.log(inventory);
+
+// opdracht 2a
+
+let sum = 0
+for(let item of inventory ){
+
+    sum = item.sold + sum
+}
+// console.log(sum)
+
+// opdracht 2b
+
+ const spanb = document.getElementById('op2-b');
+ spanb.innerHTML = sum;
+
+// opdracht 2c
+
+let sumc = 0
+for(let items of inventory ){
+
+    sumc = items.originalStock + sumc
+}
+console.log(sumc)
+
+// opdracht 2d
+
+const spand = document.getElementById('op2-d');
+spand.innerHTML = sumc;
+
+// opdracht 2e
+
+document.getElementById('op2-e').innerHTML = sumc - sum; 
+
+
+   
+   
+  
+
+
+
+
+
